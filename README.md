@@ -50,10 +50,8 @@ Python: 3.8 – 3.10 recommended
 - Update the dataset path, feature set path, and any other necessary paths for saving data, scores, and images.
 - Make sure all paths are correctly configured before running the code to avoid errors.
 
-# Publicly avalable five datasets
+# Publicly avalable dataset as example.
 - https://www.kaggle.com/datasets/preethikurra/ravdess-tess/data
-- https://www.kaggle.com/datasets/ejlok1/surrey-audiovisual-expressed-emotion-savee
-- 
 
 # Notes
 - This code is research-oriented and designed for reproducible experiments.
