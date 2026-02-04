@@ -11,7 +11,7 @@ This work implements a Deep Conditional Random Field (DeepCRF) with BiLSTM/GRU f
 
 # Folder Structure
     .
-    ├── DeepCRF_BiLSTM/# These python scripts are used for Emotion Detection using DeepCRF and BiLSTM, 80%-20% train-test aplit without PCA, 5-fold cross validation with PCA.
+    ├── DeepCRF_BiLSTM/    # These Python scripts implement an emotion detection using DeepCRF and BiLSTM. The experiments include an 80–20 train–test split without PCA and 5-fold cross-validation with PCA.
     │   ├── drawing.py
     │   ├── main.py
     │   ├── main_fold.py
