@@ -33,6 +33,29 @@ This work implements a Deep Conditional Random Field (DeepCRF) with BiLSTM/GRU f
 └── README.md
 
 
+.
+├── DeepCRF_BiLSTM/
+│   ├── drawing.py
+│   ├── main.py
+│   ├── main_fold.py
+│   ├── main_PCA_Count.py
+│   ├── train_DeepCRF.py
+│   ├── train_DeepCRF_Fold.py
+│   ├── train_DeepCRF_Normal_Paper.py
+│   ├── train_DeepCRF_PCA_Count.py
+│
+├── SpeechEM/
+│   ├── AudioProcess.py        # Audio preprocessing
+│   ├── DataAugmentation.py    # Data augmentation methods
+│   ├── FeatureExtract.py      # Feature extraction (e.g., MFCC, etc.)
+│   ├── ReadDatabase.py        # Dataset loader
+│   └── main.py                # Pipeline entry point
+│
+├── datasetFeature/            # Extracted feature files (*.feat)
+├── results/                   # Auto-generated results (metrics, plots, reports)
+└── README.md
+
+
 # Guidelines for Running the Code
 
 - Set up the Python environment and install all required libraries and dependencies.
