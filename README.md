@@ -10,56 +10,52 @@ To view a copy of this license, visit: https://creativecommons.org/licenses/by/4
 This work implements a Deep Conditional Random Field (DeepCRF) with BiLSTM/GRU framework for Speech Emotion Recognition (SER). It supports feature extraction, preprocessing, data augmentation, training, and N-fold cross-validation, and produces detailed evaluation reports, confusion matrices, and aggregated training curves. The code is designed for research experiments and reproducible evaluation across multiple(five) speech emotion datasets.
 
 # Folder Structure
-.
-├── DeepCRF_BiLSTM/       # These python scripts are used for Emotion Detection using DeepCRF and BiLSTM, 80%-20% train-test aplit without PCA, 5-fold cross validation with PCA.
-│   ├── drawing.py
-│   ├── main.py
-│   ├── main_fold.py
-│   ├── main_PCA_Count.py
-│   ├── train_DeepCRF.py
-│   ├── train_DeepCRF_Fold.py
-│   ├── train_DeepCRF_Normal_Paper.py
-│   ├── train_DeepCRF_PCA_Count.py
-│
-├── SpeechEM/      # These python scripts used for feature extraction from audio-speach of 5 public dataset.
-│   ├── AudioProcess.py        # Audio preprocessing
-│   ├── DataAugmentation.py    # Data augmentation methods
-│   ├── FeatureExtract.py      # Feature extraction (e.g., MFCC, etc.)
-│   ├── ReadDatabase.py        # Dataset loader
-│   └── main.py                # Pipeline entry point
-│
-├── datasetFeature/            # Extracted feature files (*.feat)
-├── results/                   # Auto-generated results (metrics, plots, reports)
-└── README.md
+    .
+    ├── DeepCRF_BiLSTM/# These python scripts are used for Emotion Detection using DeepCRF and BiLSTM, 80%-20% train-test aplit without PCA, 5-fold cross validation with PCA.
+    │   ├── drawing.py
+    │   ├── main.py
+    │   ├── main_fold.py
+    │   ├── main_PCA_Count.py
+    │   ├── train_DeepCRF.py
+    │   ├── train_DeepCRF_Fold.py
+    │   ├── train_DeepCRF_Normal_Paper.py
+    │   └── train_DeepCRF_PCA_Count.py
+    │
+    ├── SpeechEM/  # These python scripts used for feature extraction from audio-speach of 5 public dataset.
+    │   ├── AudioProcess.py
+    │   ├── DataAugmentation.py
+    │   ├── FeatureExtract.py
+    │   ├── ReadDatabase.py
+    │   └── main.py
+    │
+    ├── datasetFeature/     # Extracted feature files (*.feat), stores **precomputed features** used for training.
+    ├── results/            # Training results, plots, reports
+    └── README.md
 
-
-.
-├── DeepCRF_BiLSTM/
-│   ├── drawing.py
-│   ├── main.py
-│   ├── main_fold.py
-│   ├── main_PCA_Count.py
-│   ├── train_DeepCRF.py
-│   ├── train_DeepCRF_Fold.py
-│   ├── train_DeepCRF_Normal_Paper.py
-│   ├── train_DeepCRF_PCA_Count.py
-│
-├── SpeechEM/
-│   ├── AudioProcess.py        # Audio preprocessing
-│   ├── DataAugmentation.py    # Data augmentation methods
-│   ├── FeatureExtract.py      # Feature extraction (e.g., MFCC, etc.)
-│   ├── ReadDatabase.py        # Dataset loader
-│   └── main.py                # Pipeline entry point
-│
-├── datasetFeature/            # Extracted feature files (*.feat)
-├── results/                   # Auto-generated results (metrics, plots, reports)
-└── README.md
-
+# Requirements
+Python: 3.8 – 3.10 recommended
+#### Core Libraries:
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - tensorflow (Keras)
+#### For audio processing:
+  - librosa
+  - soundfile
 
 # Guidelines for Running the Code
-
 - Set up the Python environment and install all required libraries and dependencies.
 - Update the dataset path, feature set path, and any other necessary paths for saving data, scores, and images.
 - Make sure all paths are correctly configured before running the code to avoid errors.
 
 # Publicly avalable five datasets
+- https://www.kaggle.com/datasets/preethikurra/ravdess-tess/data
+- https://www.kaggle.com/datasets/ejlok1/surrey-audiovisual-expressed-emotion-savee
+- 
+
+# Notes
+- This code is research-oriented and designed for reproducible experiments.
+- You must ensure feature files (.feat) exist before training.
+- Large datasets may require more RAM and CPU time.
